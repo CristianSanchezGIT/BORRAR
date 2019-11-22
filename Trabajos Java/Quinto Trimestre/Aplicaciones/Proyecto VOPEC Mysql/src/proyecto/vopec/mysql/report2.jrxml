@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="1b4a9fd4-ad5d-45cc-b152-2f1654b48f40">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     candidatos.`Codigo_Candidato` AS candidatos_Codigo_Candidato,
+     candidatos.`Id_Estudiante` AS candidatos_Id_Estudiante,
+     candidatos.`Nombre_Candidato` AS candidatos_Nombre_Candidato,
+     candidatos.`Tipo_Representacion` AS candidatos_Tipo_Representacion,
+     candidatos.`Imagen_Candidato` AS candidatos_Imagen_Candidato,
+     candidatos.`Color_Identificacion_Candidato` AS candidatos_Color_Identificacion_Candidato,
+     candidatos.`Cantidad_Propuestas_Candidato` AS candidatos_Cantidad_Propuestas_Candidato,
+     estudiante.`Id_Estudiante` AS estudiante_Id_Estudiante,
+     estudiante.`Id_Usuario` AS estudiante_Id_Usuario,
+     estudiante.`Codigo_Resultados` AS estudiante_Codigo_Resultados,
+     estudiante.`Codigo_Curso` AS estudiante_Codigo_Curso,
+     estudiante.`Genero_Estudiante` AS estudiante_Genero_Estudiante,
+     estudiante.`Nombre_Estudiante` AS estudiante_Nombre_Estudiante,
+     estudiante.`Edad_Estudiante` AS estudiante_Edad_Estudiante,
+     estudiante.`Jornada_Estudiante` AS estudiante_Jornada_Estudiante,
+     estudiante.`Correo_Estudiante` AS estudiante_Correo_Estudiante
+FROM
+     `candidatos` candidatos,
+     `estudiante` estudiante]]>
+	</queryString>
+	<field name="candidatos_Codigo_Candidato" class="java.math.BigDecimal"/>
+	<field name="candidatos_Id_Estudiante" class="java.math.BigDecimal"/>
+	<field name="candidatos_Nombre_Candidato" class="java.lang.String"/>
+	<field name="candidatos_Tipo_Representacion" class="java.lang.String"/>
+	<field name="candidatos_Imagen_Candidato" class="java.lang.String"/>
+	<field name="candidatos_Color_Identificacion_Candidato" class="java.lang.String"/>
+	<field name="candidatos_Cantidad_Propuestas_Candidato" class="java.math.BigDecimal"/>
+	<field name="estudiante_Id_Estudiante" class="java.math.BigDecimal"/>
+	<field name="estudiante_Id_Usuario" class="java.math.BigDecimal"/>
+	<field name="estudiante_Codigo_Resultados" class="java.math.BigDecimal"/>
+	<field name="estudiante_Codigo_Curso" class="java.math.BigDecimal"/>
+	<field name="estudiante_Genero_Estudiante" class="java.lang.String"/>
+	<field name="estudiante_Nombre_Estudiante" class="java.lang.String"/>
+	<field name="estudiante_Edad_Estudiante" class="java.math.BigDecimal"/>
+	<field name="estudiante_Jornada_Estudiante" class="java.lang.String"/>
+	<field name="estudiante_Correo_Estudiante" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<image>
+				<reportElement uuid="d05839df-05f3-4ed5-acf4-919db25b540f" x="275" y="0" width="300" height="64"/>
+				<imageExpression><![CDATA["leaf_banner_green.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="84e1a3e5-273f-4b52-a66c-4f4351f604b9" style="Title" x="0" y="13" width="263" height="33"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Leaf Green Title]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="fe986ff6-0312-4e18-8c66-ca2f4eb6aac9" style="SubTitle" x="100" y="46" width="174" height="22"/>
+				<textElement/>
+				<text><![CDATA[Leaf Green SubTitle]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement uuid="39dece6e-cfe3-415a-b87f-5a4a76da79f7" positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement uuid="d312366a-69c3-4fe6-a4d2-d7e310bd1e23" style="Column header" x="0" y="19" width="34" height="15"/>
+				<textElement/>
+				<text><![CDATA[candidatos_Codigo_Candidato]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f902073e-41f5-42f5-9e83-4846212efe3e" style="Column header" x="34" y="19" width="34" height="15"/>
+				<textElement/>
+				<text><![CDATA[candidatos_Id_Estudiante]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="eaa423ef-e416-476b-9bba-07337f99d533" style="Column header" x="68" y="19" width="34" height="15"/>
+				<textElement/>
+				<text><![CDATA[candidatos_Nombre_Candidato]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5fc01647-ecb4-4e69-9360-881a4616a304" style="Column header" x="102" y="19" width="34" height="15"/>
+				<textElement/>
+				<text><![CDATA[candidatos_Tipo_Representacion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="40fe4ce0-1937-4bea-808c-c9575510e12f" style="Column header" x="136" y="19" width="34" height="15"/>
+				<textElement/>
+				<text><![CDATA[candidatos_Imagen_Candidato]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a0273afc-7793-4033-bff9-a2f53bfe71a0" style="Column header" x="170" y="19" width="34" height="15"/>
+				<textElement/>
+				<text><![CDATA[candidatos_Color_Identificacion_Candidato]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="6e3c37af-0d1b-44dc-a478-b4c79eb05f4f" style="Column header" x="204" y="19" width="34" height="15"/>
+				<textElement/>
+				<text><![CDATA[candidatos_Cantidad_Propuestas_Candidato]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="825cbf85-2ece-4b22-b744-22ab3ce9f758" style="Column header" x="238" y="19" width="34" height="15"/>
+				<textElement/>
+				<text><![CDATA[estudiante_Id_Estudiante]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2534e4ae-749b-4015-8167-eaae4c6bf176" style="Column header" x="272" y="19" width="34" height="15"/>
+				<textElement/>
+				<text><![CDATA[estudiante_Id_Usuario]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="7e381ff5-1dca-4963-8f50-94bd7c60f9f8" style="Column header" x="306" y="19" width="34" height="15"/>
+				<textElement/>
+				<text><![CDATA[estudiante_Codigo_Resultados]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="19a028c8-8962-4311-9070-1261b243252b" style="Column header" x="340" y="19" width="34" height="15"/>
+				<textElement/>
+				<text><![CDATA[estudiante_Codigo_Curso]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="72fb10ed-835d-4342-bd2f-54c9534facc0" style="Column header" x="374" y="19" width="34" height="15"/>
+				<textElement/>
+				<text><![CDATA[estudiante_Genero_Estudiante]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="babc3fa1-c8ca-4809-a8fe-c064938ff886" style="Column header" x="408" y="19" width="34" height="15"/>
+				<textElement/>
+				<text><![CDATA[estudiante_Nombre_Estudiante]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2750ee99-c451-4d31-8ec9-55b9203624b4" style="Column header" x="442" y="19" width="34" height="15"/>
+				<textElement/>
+				<text><![CDATA[estudiante_Edad_Estudiante]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="658c8f02-4ff3-4f5a-9c13-8e6022998e98" style="Column header" x="476" y="19" width="34" height="15"/>
+				<textElement/>
+				<text><![CDATA[estudiante_Jornada_Estudiante]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="777cf042-0b5d-4516-92cc-26d83fbdb237" style="Column header" x="510" y="19" width="34" height="15"/>
+				<textElement/>
+				<text><![CDATA[estudiante_Correo_Estudiante]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement uuid="7e01a12a-f13b-4eb1-a22e-d5fa37cdb5cb" positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement uuid="d596a00f-2d9e-4670-a7e2-bc7d49cd6beb" style="Detail" x="0" y="0" width="34" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{candidatos_Codigo_Candidato}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="01954e9b-b422-4104-9c64-8dfb5f2340b2" style="Detail" x="34" y="0" width="34" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{candidatos_Id_Estudiante}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="ad768813-8361-469d-b47c-ef3481e6fa74" style="Detail" x="68" y="0" width="34" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{candidatos_Nombre_Candidato}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="1a7de6e1-18ba-4749-8968-067781466a3f" style="Detail" x="102" y="0" width="34" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{candidatos_Tipo_Representacion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="010571cd-3eb0-47e4-8599-9de3317ba6e9" style="Detail" x="136" y="0" width="34" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{candidatos_Imagen_Candidato}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="a1561fdb-ad29-4a55-a8db-fd7f65d02310" style="Detail" x="170" y="0" width="34" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{candidatos_Color_Identificacion_Candidato}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="8eb315f1-cab8-4851-ac3e-0e951d6632f1" style="Detail" x="204" y="0" width="34" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{candidatos_Cantidad_Propuestas_Candidato}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="ff04be23-7366-4f25-80e7-22ba29896336" style="Detail" x="238" y="0" width="34" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{estudiante_Id_Estudiante}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="08ba2f04-0d51-404b-9109-85689488d080" style="Detail" x="272" y="0" width="34" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{estudiante_Id_Usuario}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="fc72c9e7-3d65-4c3d-a4cc-c3fbd7b86890" style="Detail" x="306" y="0" width="34" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{estudiante_Codigo_Resultados}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="1a14a404-252b-4cc9-a769-a04e3e2c9f6b" style="Detail" x="340" y="0" width="34" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{estudiante_Codigo_Curso}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="0730bab3-c7e0-4764-bbdf-73cc04901fe4" style="Detail" x="374" y="0" width="34" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{estudiante_Genero_Estudiante}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="cadf6062-7f49-4891-8160-d51ca193a6cb" style="Detail" x="408" y="0" width="34" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{estudiante_Nombre_Estudiante}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="68fe6cf9-8d86-4682-a130-c1c28d4db55c" style="Detail" x="442" y="0" width="34" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{estudiante_Edad_Estudiante}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="3dd3170b-72fb-490b-85bc-589002ee794e" style="Detail" x="476" y="0" width="34" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{estudiante_Jornada_Estudiante}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="6f31925f-c742-436d-b1a1-b5dc700b58a5" style="Detail" x="510" y="0" width="34" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{estudiante_Correo_Estudiante}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement uuid="fcec521a-ef35-4209-baca-944c1095d34a" positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement uuid="c8f3bee5-4777-4f17-adf9-093e39dff722" style="Column header" x="433" y="0" width="80" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="2cdb7138-179f-4c53-b4d7-b3cd743d6655" style="Column header" x="513" y="0" width="40" height="20"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="021def29-4f43-448f-b786-f563be2b39a8" style="Column header" x="0" y="0" width="197" height="20"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

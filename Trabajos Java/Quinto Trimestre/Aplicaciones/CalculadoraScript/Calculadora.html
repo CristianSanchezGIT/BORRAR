@@ -1,0 +1,113 @@
+<html>
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <link rel='StyleSheet' href='Estilo.css' type='text/css'> </link>
+ <title>Calculadora Bàsica en Javascript</title>
+
+ <script type="text/javascript" src="script.js"></script>
+
+<style>
+
+input[type=button],input[type="text"]{
+
+
+  background: black;
+}
+
+table,form{
+  width: 600px;
+  height: 500px;
+  margin: 0 auto;
+}
+
+footer{
+  text-align: center;
+  font-size: 18px;
+}
+
+</style>
+
+
+</head>
+
+<body bgcolor="gray">
+    <font size="2" face="Arial" color="white"> Hecho Por:<br>
+    Cristian Stiven Sanchez Rubio<br>
+    Andres Camilo Martinez<br>
+    Johan Chitiva</font>
+    
+    <BR><BR><BR>
+<form name="fo">
+    <center>
+        <font size="5" face="Times New Roman">  Calculadora Bàsica en Javascript </font>
+    </center><br><br>
+  <table bgcolor="#6E6E6E">
+
+    <tr>
+      <td colspan="7"><input type="text" name="valores" id="valores" onkeypress="function numeros(event)" class="button"></td>
+
+    </tr>
+    <tr>
+        
+    </tr>
+    <td colspan="2"><input type="button" value="SENO" onClick="seno(value)" class="button"></td>
+    <td colspan="2"><input type="button" value="COSENO" onClick="coseno(value)" class="button"></td>
+    <td colspan="2"><input type="button" value="TANGENTE" onClick="tangente(value)" class="button"></td>
+    <td><input type="button" value="Metros  A  Centimetros" onClick="MAC(value)" class="button"></td>
+    <tr>
+
+      <td><input type="button" value="7" onClick="retornar(value)" class="button"></td>
+      <td><input type="button" value="8" onClick="retornar(value)" class="button"></td>
+      <td><input type="button" value="9" onClick="retornar(value)" class="button"></td>
+      <td><input type="button" value="+" onclick="comprobar(value)" class="button"></td>
+      <td colspan="2"><input type="button" value="Raiz^2" onclick="raiz(value)" class="button"></td>
+      <td><input type="button" value="Centimetros  A  Metros" onClick="CAM(value)" class="button"></td>
+      
+
+    </tr>
+
+    <tr>
+
+      <td><input type="button" value="4" onClick="retornar(value)" class="button"></td>
+      <td><input type="button" value="5" onClick="retornar(value)" class="button"></td>
+      <td><input type="button" value="6" onClick="retornar(value)" class="button"></td>
+      <td><input type="button" value="*" onclick="comprobar(value)" class="button"></td>
+      <td colspan="2"><input type="button" value="^2" onclick="potencia(value)" class="button"></td>
+      <td><input type="button" value="Celcius°  A  Kelvin°" onClick="CAK(value)" class="button"></td>
+      
+
+    </tr>
+
+    <tr>
+
+      <td><input type="button" value="1" onClick="retornar(value)" class="button"></td>
+      <td><input type="button" value="2" onClick="retornar(value)" class="button"></td>
+      <td><input type="button" value="3" onClick="retornar(value)" class="button"></td>
+      <td><input type="button" value="/" onclick="comprobar(value)" class="button"></td>
+       <td><input type="button" value="-" onclick="comprobar(value)" class="button"></td>
+      <td><input type="button" value="C" onclick="eliminar_todo()" class="button"></td>
+      <td><input type="button" value="Kelvil°  A  Celcius°" onClick="KAC(value)" class="button"></td>
+       
+
+    </tr>
+
+    <tr>
+
+      <td><input type="button" value="0" onClick="retornar(value)" class="button"></td>
+      <td colspan="3"><input type="button" value="Borra 1" onclick="eliminar()" class="button"></td>
+      <td><input type="button" value="." onclick="comprobar(value)" class="button"></td>
+      <td colspan="2"><input type="button" value="=" onclick="calcular()" class="button"></td>
+      
+
+    </tr>
+
+
+        
+
+  </table>
+
+</form>
+<br><br><br><br><br>
+
+</body>
+</html>

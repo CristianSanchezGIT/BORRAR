@@ -1,0 +1,93 @@
+﻿<html>
+<head>
+  <meta charset="utf8">
+ <title>Calculadora Bàsica en Javascript</title>
+
+ <script type="text/javascript" src="script.js"></script>
+
+<style>
+
+input[type=button],input[type="text"]{
+  width: 100%;
+  height: 100%;
+  font-size: 30px;
+}
+
+table,form{
+  width: 500px;
+  height: 400px;
+  margin: 0 auto;
+}
+
+footer{
+  text-align: center;
+  font-size: 16px;
+}
+
+</style>
+
+
+</head>
+
+<body>
+
+<form name="fo">
+
+  <h1>Calculadora Bàsica en Javascript</h1>
+
+  <table>
+
+    <tr>
+      <td colspan="5"><input type="text" name="valores" id="valores" onkeypress="return solonumeros(event)"></td>
+
+    </tr>
+
+    <tr>
+
+      <td><input type="button" value="7" onClick="retornar(value)"></td>
+      <td><input type="button" value="8" onClick="retornar(value)"></td>
+      <td><input type="button" value="9" onClick="retornar(value)"></td>
+      <td><input type="button" value="+" onclick="comprobar(value)"></td>
+      <td><input type="button" value="-" onclick="comprobar(value)"></td>
+
+    </tr>
+
+    <tr>
+
+      <td><input type="button" value="4" onClick="retornar(value)"></td>
+      <td><input type="button" value="5" onClick="retornar(value)"></td>
+      <td><input type="button" value="6" onClick="retornar(value)"></td>
+      <td><input type="button" value="*" onclick="comprobar(value)"></td>
+      <td><input type="button" value="/" onclick="comprobar(value)"></td>
+
+    </tr>
+
+    <tr>
+
+      <td><input type="button" value="1" onClick="retornar(value)"></td>
+      <td><input type="button" value="2" onClick="retornar(value)"></td>
+      <td><input type="button" value="3" onClick="retornar(value)"></td>
+      <td><input type="button" value="<-" onclick="eliminar()"></td>
+      <td><input type="button" value="C" onclick="eliminar_todo()"></td>
+
+    </tr>
+
+    <tr>
+
+      <td colspan="2"><input type="button" value="0" onClick="retornar(value)"></td>
+      <td></td>
+      <td colspan="2"><input type="button" value="=" onclick="calcular()"></td>
+      
+
+    </tr>
+
+
+        
+
+  </table>
+
+</form>
+<br><br><br><br><br>
+
+</body>
+</html>
